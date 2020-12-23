@@ -7,7 +7,7 @@ int main(int argc, char **argv)
 		return 1;
 	}
 	PS2Ptr start = strtol(argv[1], NULL, 16);
-	uint32_t end = strtol(argv[2], NULL, 16);
+	PS2Ptr end = strtol(argv[2], NULL, 16);
 	uint8_t value = strtol(argv[3], NULL, 16);
 	ipc_begin();
 	ipc_memset(start, value, end - start);
